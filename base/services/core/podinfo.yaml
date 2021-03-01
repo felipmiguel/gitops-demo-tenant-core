@@ -4,6 +4,7 @@ metadata:
   name: podinfo
 spec:
   releaseName: podinfo
+  serviceAccountName: core-team
   chart:
     spec:
       chart: podinfo
