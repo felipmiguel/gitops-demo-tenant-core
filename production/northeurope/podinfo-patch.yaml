@@ -6,4 +6,4 @@ spec:
   values:
     ingress:
       hosts:
-      - podinfo.production.euw
+      - podinfo.production.eun
