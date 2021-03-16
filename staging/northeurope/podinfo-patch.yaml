@@ -1,6 +1,6 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
-metadata:
+metacore:
   name: podinfo
 spec:
   values:
