@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: core
 bases:
 - ../automation
-- ../sources
+- ../_sources
 resources:
 - podinfo.yaml
