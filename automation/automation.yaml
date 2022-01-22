@@ -1,15 +1,20 @@
----
-apiVersion: image.toolkit.fluxcd.io/v1alpha1
+apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
   name: core
 spec:
-  checkout:
-    branch: main
-    gitRepositoryRef:
-      name: core
-  commit:
-    authorEmail: fluxcdbot@users.noreply.github.com
-    authorName: fluxcdbot
-    messageTemplate: '[ci skip] update image'
-  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: core
+  interval: 5m
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+      messageTemplate: |
+        An automated update from FluxBot
+        [ci skip]
