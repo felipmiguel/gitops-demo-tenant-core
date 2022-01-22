@@ -4,3 +4,5 @@ bases:
 - ../base
 patchesStrategicMerge:
 - podinfo-patch.yaml
+transformers:
+- _env.yaml
